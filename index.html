@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diksha Kumari : Portfolio</title> 
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>{
+   <div id="header">
+    <div class="container">
+        <nav>
+           <img src="\images\logo.png" class="logo">
+           <ul>
+            <li><a href="#header">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">Projects</a></li>    
+             <li><a href="#contact">CONTACT</a></li>
+
+           </ul>
+        </nav>
+        <div class="header-text">
+            <p>DIKSHA KUMARI</p>
+            <h1>Hi! Welcome to my Portfolio</h1>
+        </div>
+        <!------------about--------->/
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                    
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>An enthusiastic, determined, hard working and passionate person striving to create a big change in the world.
+
+                        </p>
+                        <div class="tab-titles">
+                           <p class="tab-links" class="active link"onclick="opentab('skills')">Skills</p>
+                           <p class="tab-links"onclick="opentab('education')">Education</p>
+                            <p class="tab-links"onclick="opentab('projects')">Projects</p>
+                        </div>
+                        <div class="tab-contents active-tabs" id="skills">
+                            <ul>
+                                <li><span>C/C++</span></li>
+                                <li><span>Python</span></li>
+                                <li><span>HTML</span></li>
+                                <li><span>Javascript</span></li>
+                                <li><span>CSS</span></li>
+                                <LI><SPan>MATLAB</SPan></LI>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Ranchi University (2022-24)</span><br>M.SC. Mathematics with Specization in Operations Research </li>
+                                <li><span>Ranchi Womens College (2019-22)</span><br>B.Sc Mathematics(H) </li>
+                                <li><span>DAV Hehal, Ranchi</span><br>PCM with Computer Science</li>
+                                <li><span>St. Michael's School, Ranchi</span><br>AISSE</li>
+                               
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="projects">
+                            <ul>
+                                <li><span>ecommerce website</span></li>
+                                <li><span>Food Delivery Website</span></li>
+                                <li><span>Weather App</span></li>
+                                <li><span>My Portfolio</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+}
+
+<!-------projects------>
+
+<div id="projects">
+    <div class="conntainer">
+        <h1 class="sub-title">My Projects</h1>
+     <div class="services-list">
+        <div>
+            <h2>ecommerce website</h2>
+            <p>An ecommerce website for selling items for a new business.</p>
+        </div> 
+        <div>
+            <h2>Food Delivery Website</h2>
+            <p>A website for delivery of food items for a cloud kitchen.</p>
+        </div> 
+        <div>
+            <h2>Weather App</h2>
+            <p>An app which shows temperature of the desired area.</p>
+        </div> 
+        <div>
+            <h2>My Portfolio</h2>
+        </div>    
+     </div>  
+    
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>dikshariya11@gmail.com</p>
+                <p>8102897260</p>
+            </div>
+            <div class="contact-rightt">
+                <form>
+                 <input type="text" name="Name" placeholder="Your Name" required>
+                 <input type="email" name="email" placeholder="Your Email" required>
+                 <textarea name="Message" rows="6" placeholder="Your Message"></textarea> 
+                  <button type= "submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            
+        }
+    
+    for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+            
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+
+    
+</body>
+</html>
